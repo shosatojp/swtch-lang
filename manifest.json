@@ -2,7 +2,7 @@
     "name": "Swtich Locale",
     "version": "1.0",
     "author": "Sho Sato",
-    "description": "Swtich hl param",
+    "description": "Swtich gl param",
     "content_scripts": [
         {
             "matches": [

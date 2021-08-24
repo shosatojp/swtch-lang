@@ -60,6 +60,16 @@ chrome.webNavigation.onBeforeNavigate.addListener((e) => {
                     prevUrl = newUrl;
                 }
             }
+
+            if (params.tbs) {
+                chrome.storage.sync.set({ tbs: e.detail.tbs }, function () {
+                    console.log('current tbs changed to ' + e.detail.tbs);
+                });
+            } else {
+                chrome.storage.sync.get(['tbs'], function (result) {
+                    result.tbs
+                });
+            }
         });
     }
 });

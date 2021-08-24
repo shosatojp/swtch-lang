@@ -31,6 +31,7 @@
     }
 
     function insertUI() {
+        // switcher
         const ev = new CustomEvent('shosato.jp/switch-lang/gls');
         document.addEventListener('shosato.jp/switch-lang/gls/r', (result) => {
             const gls = result.detail.gls;
@@ -42,7 +43,6 @@
             });
         });
         document.dispatchEvent(ev);
-
     }
 
     window.addEventListener('DOMContentLoaded', () => insertUI());
